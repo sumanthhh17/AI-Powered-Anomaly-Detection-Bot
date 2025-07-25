@@ -1,0 +1,4 @@
+few things should be added by the user that are 
+(i) the environmental file 
+(ii)Data packet (a little changes are to be dont for the name of which your data packet name is so, instead of Friday-WorkingHours-Afternoon-DDos.pcap_ISCX  you got to put your data packet's name 
+(iii)venu should also be downloaded by user because its a huge folder it could not be uploaded here 
