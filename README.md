@@ -4,7 +4,7 @@ This project focuses on building an AI-powered anomaly detection system for real
 🔐 Key Features
 Real-Time Monitoring: Continuous analysis of live network traffic.
 
-Anomaly Detection with Isolation Forest: Uses unsupervised learning to detect unknown or novel cyber threats.
+Anomaly Detection with Isolation Forest: Uses unsupervised learning to detect unknown or novel cyber threatss.
 
 Automated Alerts: Slack notifications on detection of anomalies for faster incident response.
 
