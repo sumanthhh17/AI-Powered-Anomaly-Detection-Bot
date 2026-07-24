@@ -10,7 +10,7 @@ Automated Alerts: Slack notifications on detection of anomalies for faster incid
 
 Visual Dashboard: Interactive dashboards built with Dash/Plotly for real-time visualization and historical analysis.
 
-Scalable Pipeline: Modular architecture including packet sniffing, feature extraction, detection model, alerting, and dashboard.
+Scalable Pipeline: Modular architecture including packet sniffing, feature extraction, detection model, alerting, and dashboard..
 
 🧠 Tech Stack
 Languages & Libraries: Python, pandas, NumPy, scikit-learn, scapy
