@@ -9,7 +9,7 @@ A local network anomaly detection demonstration that trains an Isolation Forest,
 1. Install **Python 3.13**.
 2. Clone this repository, or download its ZIP from GitHub and extract it into a normal folder.
 3. Open the project folder and run **SETUP_WINDOWS.cmd** once to create an isolated environment and install the required libraries.
-4. Double-click **START_DASHBOARD.cmd**. Your browser opens **http://127.0.0.1:8050/**. Keep the launch window open.
+4. Double-click **START_DASHBOARD.cmd**.
 5. Click **Start / resume** to replay 5,000 held-out flows through the saved model.
 6. Watch the counters, charts, and recent-flow table update. Use **Pause**, **Start / resume**, and **Stop** to control replay.
 7. Click **Export session** to save the full session as CSV. The table displays only the latest 300 flows; exports include every flow in the selected session.
