@@ -1,0 +1,97 @@
+{
+  "created_at": "2026-10-03T17:41:33.516973+00:00",
+  "dataset_file": "network_traffic.csv",
+  "dataset_sha256": "6ff1580f5f81c0ae28a26f7631721018577f5f7c5e0feac28b795fcfe7b411ee",
+  "cleaning": {
+    "input_rows": 225745,
+    "valid_rows": 225743,
+    "dropped_rows": 2
+  },
+  "labels": {
+    "DDoS": 128027,
+    "BENIGN": 97716
+  },
+  "features": [
+    "flow_duration_us",
+    "fwd_packets",
+    "bwd_packets",
+    "fwd_bytes",
+    "bwd_bytes",
+    "fwd_length_max",
+    "bwd_length_max",
+    "fwd_length_min",
+    "bwd_length_min",
+    "fwd_length_mean",
+    "bwd_length_mean"
+  ],
+  "feature_schema_version": 1,
+  "algorithm": "Isolation Forest",
+  "transform": "log1p of each feature",
+  "parameters": {
+    "n_estimators": 250,
+    "max_samples": 1024,
+    "random_state": 42
+  },
+  "split": {
+    "method": "GroupShuffleSplit by identical feature vector",
+    "random_states": [
+      42,
+      43
+    ],
+    "train_rows": 134608,
+    "benign_training_rows": 57727,
+    "excluded_attack_training_rows": 76881,
+    "validation_rows": 46003,
+    "test_rows": 45132,
+    "overlapping_feature_groups": 0
+  },
+  "threshold": 0.5494280771068508,
+  "threshold_selection": "Max validation F1 with validation FPR <= 5.0%",
+  "validation": {
+    "rows": 46003,
+    "normal": 20464,
+    "attack": 25539,
+    "accuracy": 0.967958611394909,
+    "precision": 0.9608564096671646,
+    "recall": 0.9823015779787776,
+    "f1": 0.9714606567534076,
+    "roc_auc": 0.9767513522604332,
+    "false_positive_rate": 0.049941360437842065,
+    "confusion_matrix": {
+      "true_normal": 19442,
+      "false_alert": 1022,
+      "missed_attack": 452,
+      "detected_attack": 25087
+    }
+  },
+  "test": {
+    "rows": 45132,
+    "normal": 19525,
+    "attack": 25607,
+    "accuracy": 0.9682930071789417,
+    "precision": 0.9619382451849587,
+    "recall": 0.9830124575311439,
+    "f1": 0.9723611781747948,
+    "roc_auc": 0.9772806681431689,
+    "false_positive_rate": 0.051011523687580024,
+    "confusion_matrix": {
+      "true_normal": 18529,
+      "false_alert": 996,
+      "missed_attack": 435,
+      "detected_attack": 25172
+    }
+  },
+  "versions": {
+    "python": "3.13.3",
+    "scikit-learn": "1.8.0",
+    "pandas": "2.3.3",
+    "numpy": "2.2.5"
+  },
+  "limitations": [
+    "Evaluation covers this CICIDS2017 Friday DDoS file only.",
+    "Random group split from one day is not an independent network or chronological test.",
+    "Threshold calibration uses labeled validation examples; the forest itself uses only benign examples.",
+    "Live segmentation approximates CICFlowMeter; accuracy on this machine's live traffic is unmeasured.",
+    "An anomaly score is not an attack probability."
+  ]
+}
