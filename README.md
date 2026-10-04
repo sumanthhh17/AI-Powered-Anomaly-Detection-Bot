@@ -2,8 +2,6 @@
 
 A local network anomaly detection demonstration that trains an Isolation Forest, scores consistent network-flow features, stores events in SQLite, and displays an updating Dash dashboard.
 
-![Dashboard showing replay activity, flow measurements, and model evaluation](artifacts/dashboard-full.jpg)
-
 ## Start here
 
 1. Install **Python 3.13**.
